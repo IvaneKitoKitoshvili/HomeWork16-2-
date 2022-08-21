@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.Flow
 
 private const val ITEMS_PER_PAGE = 50
 
-class ArticleViewModel(
+class UserInfoViewModel(
     private val repository: UserInfoPagingSource,
 ) : ViewModel() {
 

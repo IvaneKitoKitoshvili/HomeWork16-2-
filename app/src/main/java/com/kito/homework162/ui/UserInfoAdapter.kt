@@ -8,13 +8,14 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import com.kito.homework162.Data.UserInfo
 import com.kito.homework162.databinding.ActivityMainBinding.inflate
+import com.kito.homework162.databinding.UserItemBinding
 import com.kito.homework162.databinding.UserItemBinding.inflate
 
 class UserInfoAdapter : ListAdapter<UserInfo, UserInfoViewHolder>(ARTICLE_DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserInfoViewHolder =
         UserInfoViewHolder(
-            UserInfo.inflate(
+            UserItemBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false,

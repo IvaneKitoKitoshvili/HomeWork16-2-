@@ -22,9 +22,6 @@ import androidx.lifecycle.ViewModel
 import androidx.savedstate.SavedStateRegistryOwner
 import com.example.android.codelabs.paging.data.ArticleRepository
 
-/**
- * Factory for ViewModels
- */
 class ViewModelFactory(
     owner: SavedStateRegistryOwner,
     private val repository: ArticleRepository

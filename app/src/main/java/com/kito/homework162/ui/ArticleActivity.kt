@@ -13,7 +13,7 @@ import com.kito.homework162.Injection
 import com.kito.homework162.databinding.UserItemBinding
 import kotlinx.coroutines.launch
 
-class ArticleActivity : AppCompatActivity() {
+class UserInfoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class ArticleActivity : AppCompatActivity() {
         setContentView(view)
 
 
-        val viewModel by viewModels<ArticleViewModel>(
+        val viewModel by viewModels<UserInfoViewModel>(
             factoryProducer = { Injection.provideViewModelFactory(owner = this) }
         )
 
@@ -42,10 +42,6 @@ class ArticleActivity : AppCompatActivity() {
         }
     }
 }
-
-/**
- * Sets up the [RecyclerView] and binds [ArticleAdapter] to it
- */
 private fun UserItemBinding.bindAdapter(articleAdapter: UserInfoAdapter) {
     list.adapter = UserInfoAdapter
     list.layoutManager = LinearLayoutManager(list.context)
