@@ -9,7 +9,6 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.codelabs.paging.databinding.ActivityArticlesBinding
 import com.kito.homework162.Injection
 import com.kito.homework162.databinding.UserItemBinding
 import kotlinx.coroutines.launch
@@ -28,7 +27,7 @@ class ArticleActivity : AppCompatActivity() {
         )
 
         val items = viewModel.items
-        val articleAdapter = USerInfoAdapter()
+        val articleAdapter = UserInfoAdapter()
 
         binding.bindAdapter(articleAdapter = articleAdapter)
 
@@ -47,8 +46,8 @@ class ArticleActivity : AppCompatActivity() {
 /**
  * Sets up the [RecyclerView] and binds [ArticleAdapter] to it
  */
-private fun UserItemBinding.bindAdapter(articleAdapter: USerInfoAdapter) {
-    list.adapter = articleAdapter
+private fun UserItemBinding.bindAdapter(articleAdapter: UserInfoAdapter) {
+    list.adapter = UserInfoAdapter
     list.layoutManager = LinearLayoutManager(list.context)
     val decoration = DividerItemDecoration(list.context, DividerItemDecoration.VERTICAL)
     list.addItemDecoration(decoration)
